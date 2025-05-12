@@ -1,0 +1,76 @@
+/* Custom color variables */
+:root {
+    --primary-800: #556C19;
+    --primary-700: #4A5F15;
+    --primary-600: #3E5211;
+}
+.home-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+.home-btn a {
+    color: #fff;
+    background-color: #556c19;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.home-btn a:hover {
+    background-color: #3a4a12;
+}
+
+/* Text colors */
+.text-primary-800 {
+    color: var(--primary-800);
+}
+
+/* Background colors */
+.bg-primary-800 {
+    background-color: var(--primary-800);
+}
+
+.bg-primary-700 {
+    background-color: var(--primary-700);
+}
+
+.bg-primary-600 {
+    background-color: var(--primary-600);
+}
+
+/* Hover states */
+.hover\:bg-primary-700:hover {
+    background-color: var(--primary-700);
+}
+
+.hover\:bg-primary-600:hover {
+    background-color: var(--primary-600);
+}
+
+#productsTable img {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 4px;
+}
+
+.status-active {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-inactive {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-out-of-stock {
+    background-color: #fef3c7;
+    color: #92400e;
+}

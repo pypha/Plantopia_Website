@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantopia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="font-roboto bg-white text-black">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <nav class="nav-links">
+                <a class="nav-link" href="#">Home</a>
+                <a href="komunitas.html" class="nav-link">Komunitas</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+            </nav>
+            <a href="login.html" class="login-link">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://storage.googleapis.com/a1aa/image/e6m2fHd896fOhrkjHJYf7soRYvSNKaWsu-z_O_x78YU.jpg" alt="Green leaves background" class="hero-image">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Welcome to PLANTOPIA</h1>
+            <p class="hero-text">Join the green revolution! whether you're a beginner or a seasoned plnt lover,Plantopia helps you teke care of your plants with ease. Connect with a thriving community of fellow gardeners.</p>
+            <a href="contact.html" class="hero-button">Contact Us</a>
+        </div>
+    </section>
+    
+    <!-- Marketplace -->
+    <section class="marketplace-section">
+        <div class="container">
+            <h2 class="section-title" onclick="toggleContent('marketplace-content')">MARKETPLACE</h2>
+            <div id="marketplace-content" class="marketplace-grid hidden">
+                <div class="marketplace-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/CRgdr2TPbmZw-b5ZRfGqqFL523FLWSkC8WhbVYW4GAc.jpg" class="marketplace-image">
+                    <div class="marketplace-overlay">
+                        <h3 class="marketplace-item-title">Herbs Plant</h3>
+                    </div>
+                </div>
+                <div class="marketplace-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/POqtHTrfPBvs4TBQHSI6QnZtlNQyNMPJVPDcp3UJ9ik.jpg" class="marketplace-image">
+                    <div class="marketplace-overlay">
+                        <h3 class="marketplace-item-title">Orchids</h3>
+                    </div>
+                </div>
+                <div class="marketplace-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/P_MAT-rV_PWQ5Ev7HRJpXSO9MhvXQ4YYXmh2mTDyLGA.jpg" class="marketplace-image">
+                    <div class="marketplace-overlay">
+                        <h3 class="marketplace-item-title">Succulents</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleContent('faq1')">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Ordering for Delivery?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <p id="faq1" class="faq-answer hidden">We offer fast and reliable delivery services to your doorstep.</p>
+                </div>
+                <div class="faq-item" onclick="toggleContent('faq2')">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Potting Services</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <p id="faq2" class="faq-answer hidden">We provide professional potting services for your plants.</p>
+                </div>
+                <div class="faq-item" onclick="toggleContent('faq3')">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Do we Ship Plants?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <p id="faq3" class="faq-answer hidden">Yes, we ship plants nationwide with special packaging.</p>
+                </div>
+                <div class="faq-item" onclick="toggleContent('faq4')">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Ordering for Pick up?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <p id="faq4" class="faq-answer hidden">You can order online and pick up your plants at our store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Join the Community -->
+    <section class="community-section">
+        <div class="container">
+            <h2 class="community-title">Join the Community!</h2>
+            <p class="community-text">Stay updated with the latest news and special offers.</p>
+            <div class="community-buttons">
+                <button class="community-button">Instagram</button>
+                <button class="community-button">Twitter</button>
+                <button class="community-button">YouTube</button>
+                <button class="community-button">WhatsApp</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Plantopia. All rights reserved.</p>
+    </footer>
+</body>
+</html>

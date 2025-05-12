@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Barcode</title>
+    <link rel="stylesheet" href="pembayaran.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Barcode Pembelian</h1>
+        
+        <div class="barcode-container">
+            <!-- Gambar barcode yang sudah ada -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=TRX-1234567890" alt="Barcode Pembelian" id="barcode-image">
+            <p id="barcode-number">TRX-1234567890</p>
+            
+            <div class="actions">
+                <button id="download-btn">Download Barcode</button>
+                <button href="konfirmasi_pesanan.html" id="close-btn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pembayaran.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantopia - User Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard_pengguna.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <nav class="nav-links">
+                <a href="homepage.html" class="nav-link">Home</a>
+                <a href="komunitas.html" class="nav-link">Komunitas</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+            </nav>
+            <div class="user-profile" id="profileToggle">
+                <img src="image/profil.png" alt="Profile" class="profile-img">
+                <span>AfifaAnindya</span>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="profil.html"><i class="fas fa-user"></i> My Profile</a>
+                    <a href="homepage.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="profil.html"><i class="fas fa-user"></i>Profil Saya</a></li>
+
+            </ul>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <h2>Welcome back, AfifaAnindya!</h2>
+            </div>
+            
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>My Plants</h3>
+                        <div class="card-icon green">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">12</div>
+                    <p>Plants in your collection</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Active Orders</h3>
+                        <div class="card-icon blue">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">2</div>
+                    <p>Orders being processed</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Community</h3>
+                        <div class="card-icon orange">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">5</div>
+                    <p>New discussions</p>
+                </div>
+                
+            </div>
+                
+    <script src="dashboard_pengguna.js"></script>
+</body>
+</html>

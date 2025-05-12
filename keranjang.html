@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="keranjang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marketplace Tanaman</h1>
+            <nav>
+                <ul>
+                    <li><a href="marketplace.html">Beranda</a></li>
+                    <li><a href="keranjang.html"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari produk...">
+                <button onclick="searchProduct()"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="cart">
+            <h2>Keranjang Belanja</h2>
+            <div id="cartItems">
+                <!-- Item keranjang akan dimuat di sini -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: <span id="totalPrice">Rp 0</span></h3>
+                <button onclick="window.location.href='checkout.html'">Lanjut ke Pembayaran</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Marketplace Tanaman. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="marketplace.js"></script>
+</body>
+</html>

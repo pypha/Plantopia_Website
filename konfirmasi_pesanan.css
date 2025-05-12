@@ -1,0 +1,235 @@
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #556c19;
+    --primary-light: #324405;
+    --dark-color: #232f05;
+    --light-color: #f8f9fa;
+    --white-color: #ffffff;
+    --gray-color: #6c757d;
+    --success-color: #556c19;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===== HEADER STYLES ===== */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1.2rem 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-items: center;
+    margin: 0; 
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0 auto;
+    justify-content: center; 
+}
+
+.nav-link {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+.main-content {
+    padding: 3rem 0;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+}
+
+.confirmation-card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.confirmation-icon {
+    color: var(--success-color);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.confirmation-message {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.confirmation-details {
+    color: var(--gray-color);
+    margin-bottom: 2rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(46, 139, 87, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER STYLES ===== */
+.main-footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+
+    .confirmation-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.3rem;
+    }
+
+    .confirmation-title {
+        font-size: 1.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

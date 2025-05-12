@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="detail_produk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Detail Produk</h1>
+            <nav>
+                <ul>
+                    <li><a href="marketplace.html"><i class="fas fa-store"></i> Marketplace</a></li>
+                    <li><a href="keranjang.html"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-detail-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="mainProductImage" src="" alt="Product Image">
+                </div>
+            </div>
+            
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1 id="productName"></h1>
+                <p class="price" id="productPrice"></p>
+                
+                <div class="quantity-control">
+                    <button id="decreaseQuantity"><i class="fas fa-minus"></i></button>
+                    <span id="quantity">1</span>
+                    <button id="increaseQuantity"><i class="fas fa-plus"></i></button>
+                </div>
+                
+                <button id="addToCartBtn" class="add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Tambahkan ke Keranjang
+                </button>
+            </div>
+            
+            <!-- Plant Care Information -->
+            <div class="plant-care-section">
+                <h2><i class="fas fa-seedling"></i> Informasi Perawatan Tanaman</h2>
+                
+                <div class="care-grid">
+                    <div class="care-card">
+                        <i class="fas fa-sun"></i>
+                        <h3>Cahaya</h3>
+                        <p id="lightRequirement"></p>
+                    </div>
+                    
+                    <div class="care-card">
+                        <i class="fas fa-tint"></i>
+                        <h3>Penyiraman</h3>
+                        <p id="wateringInfo"></p>
+                    </div>
+                    
+                    <div class="care-card">
+                        <i class="fas fa-thermometer-half"></i>
+                        <h3>Suhu</h3>
+                        <p id="temperatureRange"></p>
+                    </div>
+                    
+                    <div class="care-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Kelembapan</h3>
+                        <p id="humidityLevel"></p>
+                    </div>
+                </div>
+                
+                <div class="planting-guide">
+                    <h3><i class="fas fa-spa"></i> Panduan Menanam</h3>
+                    <div id="plantingGuide"></div>
+                </div>
+                
+                <div class="suitable-for">
+                    <h3><i class="fas fa-map-marker-alt"></i> Cocok Untuk</h3>
+                    <ul id="suitableLocations"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="detail_produk.js"></script>
+</body>
+</html>
