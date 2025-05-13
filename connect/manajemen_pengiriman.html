@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantopia - Manajemen Pengiriman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="manajemen_pengiriman.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="dashboard_admin.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Dashboard
+            </a>
+            <h1>Plantopia Manajemen Pengiriman</h1>
+        </div>
+
+        <div class="action-bar">
+            <button id="addShippingBtn" class="add-button">
+                <i class="fas fa-plus"></i> Tambah Pengiriman
+            </button>
+            
+            <div class="filter-container">
+                <label for="statusFilter">Filter Status:</label>
+                <select id="statusFilter" class="status-filter">
+                    <option value="all">Semua</option>
+                    <option value="pending">Menunggu</option>
+                    <option value="processing">Diproses</option>
+                    <option value="shipped">Dikirim</option>
+                    <option value="delivered">Terkirim</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="shipping-table-container">
+            <table class="shipping-table">
+                <thead>
+                    <tr>
+                        <th>ID Pengiriman</th>
+                        <th>Nama Pemesan</th>
+                        <th>Alamat</th>
+                        <th>Metode Pengiriman</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="shippingTableBody">
+                    
+                </tbody>
+            </table>
+            
+            <div class="no-shipping" id="noShippingMessage">
+                Tidak ada data pengiriman ditemukan
+            </div>
+            
+            <div class="pagination">
+                <span>Halaman 1 dari 1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shipping Modal -->
+    <div id="shippingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Tambah Pengiriman Baru</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <form id="shippingForm">
+                <input type="hidden" id="shippingId">
+                <div class="form-group">
+                    <label for="orderId">ID Pengiriman</label>
+                    <input type="text" id="orderId" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerName">Nama Pemesan</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Alamat Pemesan</label>
+                    <textarea id="customerAddress" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="shippingMethod">Metode Pengiriman</label>
+                    <select id="shippingMethod" required>
+                        <option value="reguler">REGULER</option>
+                        <option value="express">EXPRESS</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shippingStatus">Status</label>
+                    <select id="shippingStatus" required>
+                        <option value="pending">Menunggu</option>
+                        <option value="processing">Diproses</option>
+                        <option value="shipped">Dikirim</option>
+                        <option value="delivered">Terkirim</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-button">Batal</button>
+                    <button type="submit" class="save-button">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i> Memuat data...
+    </div>
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-header">
+                <h2>Konfirmasi Hapus</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <p>Apakah Anda yakin ingin menghapus data pengiriman ini?</p>
+            <div class="form-actions">
+                <button type="button" class="cancel-button">Batal</button>
+                <button type="button" id="confirmDeleteBtn" class="delete-button">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="manajemen_pengiriman.js"></script>
+</body>
+</html>
